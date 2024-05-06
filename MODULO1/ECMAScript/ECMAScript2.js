@@ -230,3 +230,102 @@ La  abstracción  es el proceso de ocultar los detalles complejos de la implemen
 y exponer solo las características esenciales y las funcionalidades de un objeto.
 
 */
+
+/*
+
+PROTOTIPO-----------------------------------------------------------------
+
+Originalmente, JavaScript utilizaba un modelo de objetos basado en prototipos en lugar de clases
+
+
+ESTRUCTURA, SINTAXIS Y METODOS--------------------------------------------
+*/
+
+//CONSTRUCTOR
+
+//Metodo especial dentro de una clase que se ejecuta automaticamente al crear un objeto
+//de esa clase. Este metodo establece las propiedades iniciales del obj basandose en los argumentos q recibe
+
+class SuperHeroe{
+    constructor(nombre,identidad,superpoder){
+        this.nombre= nombre;
+        this.superpoder=superpoder;
+        this.identidad=identidad;
+    }
+}
+
+// PROPIEDADES
+
+/* Las propiedades son variables que se encuentran dentro de una clase y que contienen
+informacion acerca del estado de un objeto. Es importante tener en cuenta que aquellos valores que
+le queramos dar a la instancia de una clase deben ser recibidos  como parametros mediante el constructor*/
+
+class SuperHeroe{
+    constructor(nombre,identidad,superpoder){
+        this.nombre= nombre;
+        this.superpoder=superpoder;
+        this.identidad=identidad;
+    }
+}
+
+let superman= SuperHeroe("Superman", "Clarck Ken", ["Volar", "Fuerza"])
+
+// METODOS
+
+/* Los metodos son funciones definidad dentro de una clase que describen las acciones
+o comportamientos de los objeos creados a partir de esa clase*/
+
+class SuperHeroe{
+    constructor(nombre,identidad,superpoder){ 
+        this.nombre= nombre;
+        this.superpoder=superpoder;
+        this.identidad=identidad;
+    }
+
+    volar(){
+        console.log("Mi nombre es", this.nombre)
+    }
+}
+
+let spiderman = new SuperHeroe("Spiderman", "Peter Parker", ["Telaraña","Fuerza"])
+spiderman.volar() //Estoy volando
+
+// INSTANCIA
+
+/* Una instancia es un objeto especifico creado a partir de una clase. Cuando se utiliza
+el constuctor de una clase para crear un nuevo objeto, ese objeto es una instancia de esa clase. 
+Es importante tener en cuenta que, para crear una instancia, es necesario utilizar la palabra reservada
+new y pasar los argumentos necesarios a la clase. Caso contrario estos tendran el valor Undefined. */
+
+/*
+
+---------------------------HERENCIA-------------------------------------------------------
+
+Cuando trabajamos con clases en JavaScript podremos ver que tendremos la opción de 
+crear una clase a partir de otra. Es decir, habrá una clase "padre" que tendrá propiedades 
+y métodos, y luego podremos crear una clase "hija", la cual heredará todas esas propiedades
+y métodos. Esta clase hija la podremos modificar.
+
+Para realizar esto utilizamos una palabra esencial llamada extends. Es decir, "extendemos" 
+una clase a partir de otra. En el siguiente video profundizaremos màs en estos puntos.
+
+*/
+
+/*
+
+En conclusión...
+
+Las funciones de flecha son una forma más concisa de escribir funciones en comparación con 
+las funciones tradicionales. Estas no solo ofrecen una sintaxis más compacta, sino que también
+heredan el valor de this del ámbito circundante, eliminando así ciertos problemas asociados 
+con el manejo del contexto en JavaScript.
+
+Las clases introducen una sintaxis más clara y orientada a objetos para la creación de objetos
+y la herencia en JavaScript. Proporcionan una estructura más organizada y fácil de entender,
+permitiendo a los desarrolladores crear y gestionar objetos de manera eficiente. Sus cuatro 
+principios fundamentales son: encapsulamiento, abstracción, herencia y polimorfismo.
+
+*/
+
+
+
